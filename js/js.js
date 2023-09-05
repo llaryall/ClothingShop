@@ -136,7 +136,7 @@ const dragging2 = (e) => {
   if (!isDragStart2) return;
   e.preventDefault();
   isDragging2 = true;
-  carousel2.classList.add("dragging");
+  carousel2.classList.add("dragging2");
   positionDiff2 = (e.pageX || e.touches[0].pageX) - prevPageX2;
   carousel2.scrollLeft = prevScrollLeft2 - positionDiff2;
   showHideIcons2();
@@ -144,7 +144,7 @@ const dragging2 = (e) => {
 
 const dragStop2 = () => {
   isDragStart2 = false;
-  carousel2.classList.remove("dragging");
+  carousel2.classList.remove("dragging2");
 
   if (!isDragging2) return;
   isDragging2 = false;

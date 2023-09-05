@@ -144,107 +144,72 @@ header {
       }
     }
   }
- /* CSS for the third carousel */
-.wrapper,
-.wrapper2,
-.wrapper3 {
-  display: flex;
-  width: 70vw;
-  height: 250px;
-  position: relative;
-  margin-top: 10px;
-  padding: 35px 0px 35px 0px;
-}
+  //* carousels------------------------------------------------------------------------------------
 
-.wrapper i,
-.wrapper2 i,
-.wrapper3 i {
-  top: 50%;
-  height: 44px;
-  width: 44px;
-  color: #4778cbf0;
-  cursor: pointer;
-  font-size: 1.15rem;
-  position: absolute;
-  text-align: center;
-  line-height: 44px;
-  background: #f9f7f7;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-}
-
-.wrapper i:active,
-.wrapper2 i:active,
-.wrapper3 i:active {
-  transform: translateY(-50%) scale(0.9);
-}
-
-.wrapper i:hover,
-.wrapper2 i:hover,
-.wrapper3 i:hover {
-  background: #f2f2f2;
-}
-
-.wrapper i:first-child,
-.wrapper2 i:first-child,
-.wrapper3 i:first-child {
-  left: -22px;
-  display: none;
-}
-
-.wrapper i:last-child,
-.wrapper2 i:last-child,
-.wrapper3 i:last-child {
-  right: -22px;
-}
-
-.wrapper .carousel,
-.wrapper2 .carousel2,
-.wrapper3 .carousel3 {
-  padding-left: 10px;
-  font-size: 0px;
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  display: flex;
-  align-items: center;
-  background-color: #ced8e9f0;
-  border-radius: 0px 50px 10px 0px;
-}
-
-.carousel.dragging,
-.carousel2.dragging,
-.carousel3.dragging {
-  cursor: grab;
-  scroll-behavior: auto;
-}
-
-.carousel.dragging img,
-.carousel2.dragging img,
-.carousel3.dragging img {
-  pointer-events: none;
-}
-
-.carousel img,
-.carousel2 img,
-.carousel3 img {
-  margin-left: 40px;
-  width: calc(100% / 2);
-  height: 80%;
-  object-fit: cover;
-  user-select: none;
-  margin-left: 14px;
-  border-radius: 30px 50px 30px 50px;
-}
-
-.carousel img:first-child,
-.carousel2 img:first-child,
-.carousel3 img:first-child {
-  margin-left: 0px;
-}
-
+  .wrapper,.wrapper2 , .wrapper3 {
+    padding-bottom: 30px;
+    padding-top: 40px;
+    display: flex;
+    max-width: 60%;
+    position: relative;
+  }
+  .wrapper i , .wrapper2 i , .wrapper3 i{
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active , .wrapper2 i:active , .wrapper3 i:active{
+    transform: translateY(-50%) scale(0.9);
+  }
+  .wrapper i:hover , .wrapper2 i:hover , .wrapper3 i:hover{
+    background: #f2f2f2;
+  }
+  .wrapper i:first-child , .wrapper2 i:first-child , .wrapper3 i:first-child{
+    left: -22px;
+    display: none;
+  }
+  .wrapper i:last-child , .wrapper2 i:last-child , .wrapper3 i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel , .wrapper2 .carousel2 , .wrapper3 .carousel3{
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    background-color: #989da47e;
+    padding: 20px 100px 20px 10px;
+    border-radius: 0px 40px 25px 0px;
+  }
+  .carousel.dragging , .carousel2.dragging2 , .carousel3.dragging3{
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging img , .carousel2.dragging2 img ,.carousel3.dragging3 img{
+    pointer-events: none;
+  }
+  .carousel img , .carousel2 img , .carousel3 img{
+    height: 210px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: calc(100% / 4);
+    border-radius: 30px 50px 30px 50px;
+    
+  }
+  .carousel img:first-child , .carousel2 img:first-child , .carousel3 img:first-child{
+    margin-left: 0px;
+  }
   
   @media screen and (max-width: 900px) {
     .carousel img{
@@ -257,6 +222,10 @@ header {
       width: 100%;
     }
   }
+
+ 
+
+  //* dropdown menu -------------------------------------------------------------------------------
   .dropdown{
     position: relative;
     
