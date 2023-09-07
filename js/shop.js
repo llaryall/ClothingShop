@@ -11,13 +11,11 @@ const fullArrow= document.getElementById('fullar');
 
 images.forEach(image => {
   image.addEventListener('click', () => {
-    container.style.transform = 'translateX(-6.5%)';
-    container.style.width = '80vw';
+    container.style.transform = 'translateX(-5.5%)';
     container.classList.add('gap')
     event.preventDefault();
     container2.style.display = 'block'; // Show container2
     container2.style.width = '370px'; // Fade in 
-    closebtn.style.display = 'block';
     body.classList.add('over')
    
     
