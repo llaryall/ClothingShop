@@ -4,6 +4,8 @@ const container = document.getElementById ('container');
 const closebtn = document.getElementById('close');
 const body = document.getElementById('body');
 const fullArrow= document.getElementById('fullar');
+const maximum = document.getElementById("max-page");
+const previmg = document.getElementById("prev-img");
 
 
 
@@ -14,11 +16,12 @@ images.forEach(image => {
     container.style.transform = 'translateX(-5.5%)';
     container.classList.add('gap')
     event.preventDefault();
-    container2.style.display = 'block'; // Show container2
+    container2.style.display = 'flex'; // Show container2
     container2.style.width = '370px'; // Fade in 
-    body.classList.add('over')
-   
-    
+    maximum.style.display = "block";
+    closebtn.style.display = "block";
+    previmg.style.display = "block";
+
 
   });
 });
@@ -29,9 +32,10 @@ closebtn.addEventListener('click' , () => {
     container.classList.remove('gap');
     container.style.width = '100vw';
     closebtn.style.display = 'none';
-    body.classList.remove('over');
+    
 })
 
-fullArrow.addEventListener('click' , () => {
-  alert('hi')
-})
+maximum.addEventListener('click' , () => {
+  container2.style.width = '100vw';
+  container2.classList.add('fullprev');
+} )

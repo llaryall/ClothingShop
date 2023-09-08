@@ -31,7 +31,7 @@ header .container-name {
 }
 header .container-name .logo {
   font-size: 20px;
-  margin-left: 10 px;
+  margin-left: 10px;
 }
 header form {
   flex-grow: 1;
@@ -150,7 +150,9 @@ header ul li .reg {
     margin: 0px;
   }
 }
-.wrapper, .wrapper2, .wrapper3 {
+.wrapper,
+.wrapper2,
+.wrapper3 {
   padding-bottom: 30px;
   padding-top: 40px;
   display: flex;
@@ -158,7 +160,9 @@ header ul li .reg {
   position: relative;
 }
 
-.wrapper i, .wrapper2 i, .wrapper3 i {
+.wrapper i,
+.wrapper2 i,
+.wrapper3 i {
   top: 50%;
   height: 44px;
   width: 44px;
@@ -174,24 +178,34 @@ header ul li .reg {
   transition: transform 0.1s linear;
 }
 
-.wrapper i:active, .wrapper2 i:active, .wrapper3 i:active {
+.wrapper i:active,
+.wrapper2 i:active,
+.wrapper3 i:active {
   transform: translateY(-50%) scale(0.9);
 }
 
-.wrapper i:hover, .wrapper2 i:hover, .wrapper3 i:hover {
+.wrapper i:hover,
+.wrapper2 i:hover,
+.wrapper3 i:hover {
   background: #f2f2f2;
 }
 
-.wrapper i:first-child, .wrapper2 i:first-child, .wrapper3 i:first-child {
+.wrapper i:first-child,
+.wrapper2 i:first-child,
+.wrapper3 i:first-child {
   left: -22px;
   display: none;
 }
 
-.wrapper i:last-child, .wrapper2 i:last-child, .wrapper3 i:last-child {
+.wrapper i:last-child,
+.wrapper2 i:last-child,
+.wrapper3 i:last-child {
   right: -22px;
 }
 
-.wrapper .carousel, .wrapper2 .carousel2, .wrapper3 .carousel3 {
+.wrapper .carousel,
+.wrapper2 .carousel2,
+.wrapper3 .carousel3 {
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
@@ -202,16 +216,22 @@ header ul li .reg {
   border-radius: 0px 40px 25px 0px;
 }
 
-.carousel.dragging, .carousel2.dragging2, .carousel3.dragging3 {
+.carousel.dragging,
+.carousel2.dragging2,
+.carousel3.dragging3 {
   cursor: grab;
   scroll-behavior: auto;
 }
 
-.carousel.dragging img, .carousel2.dragging2 img, .carousel3.dragging3 img {
+.carousel.dragging img,
+.carousel2.dragging2 img,
+.carousel3.dragging3 img {
   pointer-events: none;
 }
 
-.carousel img, .carousel2 img, .carousel3 img {
+.carousel img,
+.carousel2 img,
+.carousel3 img {
   height: 210px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -223,7 +243,9 @@ header ul li .reg {
   border-radius: 30px 50px 30px 50px;
 }
 
-.carousel img:first-child, .carousel2 img:first-child, .carousel3 img:first-child {
+.carousel img:first-child,
+.carousel2 img:first-child,
+.carousel3 img:first-child {
   margin-left: 0px;
 }
 
@@ -238,50 +260,30 @@ header ul li .reg {
   }
 }
 .dropdown {
-  position: relative;
+  padding: 15px 0px 15px 0px;
 }
 
+/* CSS for hiding the dropdown menu initially */
 .dropdown-menu {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  flex-wrap: wrap;
   visibility: hidden;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  row-gap: 30px;
   position: absolute;
-  background-color: rgba(253, 253, 245, 0.9019607843);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  padding: 0px;
-  right: -247px;
-  top: 0px;
-  width: 500px;
+  top: 60px;
+  right: 0px;
   height: 0px;
-  opacity: 0; /* Set initial opacity to 0 */
-  pointer-events: none; /* Add this to prevent interaction when hidden */
-  transition: top 1s cubic-bezier(0, 0.79, 0.25, 1) 0s;
-  transition: height 1s cubic-bezier(0.01, 0.7, 0.27, 1.02);
+  width: 350px;
+  flex-wrap: wrap;
+  transition: height 1s ease;
+  background-color: rgba(253, 253, 245, 0.9019607843);
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
-  visibility: visible;
-  opacity: 1; /* Set opacity to 1 on hover to fade in */
-  pointer-events: auto; /* Restore pointer events on hover */
-  position: absolute;
-  top: 40px;
+/* CSS for displaying the dropdown menu when hovering over the parent link */
+li:hover > .dropdown-menu {
   height: 200px;
-}
-
-.dropdown-menu a {
-  opacity: 0;
-  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dropdown-menu li {
-  margin-bottom: 12px;
-}
-
-.dropdown:hover .dropdown-menu a {
-  opacity: 1;
-  margin-bottom: 9px;
+  visibility: visible;
 }/*# sourceMappingURL=style.css.map */
