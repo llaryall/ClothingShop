@@ -84,52 +84,32 @@ header ul li .reg {
 }
 
 .dropdown {
-  position: relative;
+  padding: 15px 0px 15px 0px;
 }
 
+/* CSS for hiding the dropdown menu initially */
 .dropdown-menu {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  flex-wrap: wrap;
   visibility: hidden;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  row-gap: 30px;
   position: absolute;
-  background-color: rgba(253, 253, 245, 0.9019607843);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  padding: 0px;
-  right: -200px;
-  top: 0px;
-  width: 500px;
+  top: 60px;
+  right: 0px;
   height: 0px;
-  opacity: 0; /* Set initial opacity to 0 */
-  pointer-events: none; /* Add this to prevent interaction when hidden */
-  transition: top 1s cubic-bezier(0, 0.79, 0.25, 1) 0s;
-  transition: height 1s cubic-bezier(0.01, 0.7, 0.27, 1.02);
+  width: 350px;
+  flex-wrap: wrap;
+  transition: height 1s ease;
+  background-color: rgba(253, 253, 245, 0.9019607843);
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
-  visibility: visible;
-  opacity: 1; /* Set opacity to 1 on hover to fade in */
-  pointer-events: auto; /* Restore pointer events on hover */
-  position: absolute;
-  top: 40px;
+/* CSS for displaying the dropdown menu when hovering over the parent link */
+li:hover > .dropdown-menu {
   height: 200px;
-}
-
-.dropdown-menu a {
-  opacity: 0;
-  transition: opacity 3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dropdown-menu li {
-  margin-bottom: 12px;
-}
-
-.dropdown:hover .dropdown-menu a {
-  opacity: 1;
-  margin-bottom: 9px;
+  visibility: visible;
 }
 
 .container {
