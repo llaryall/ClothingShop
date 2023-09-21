@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 @font-face {
-  font-family: 'ab';
-  src: url(../icons/Dirooz-FD.ttf);
+  font-family: 'ab'!important;
+  src: url(../icons/Dirooz-FD.ttf)!important;
 }
 
 html {
@@ -14,7 +14,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  background-color: white;
+  background-color:white;
 }
 
 header {
@@ -28,6 +28,7 @@ header {
   box-sizing: border-box;
   width: 100%;
   z-index: 3;
+  height: 8vh;
 
   .container-name {
     flex-grow: 0;
@@ -72,10 +73,15 @@ header {
 
 
   ul {
+    height: 30px;
+    
     display: flex;
     flex-direction: row;
     column-gap: 20px;
     flex-grow: 1;
+    margin-bottom: 0px;
+    padding: 0px;
+    padding-right: 20px;
 
     li {
       list-style: none;
@@ -85,55 +91,47 @@ header {
         color: black;
       }
 
-      .reg {
-        background-color: #F3D67E;
-        padding: 3px 7px;
-        border-radius: 50px;
+      .menu{
+        width:25px;
+        
       }
     }
   }
 }
+.menu-bar{
+ display: none;
+  li{
+    border-bottom:1px solid #5b5b5bb7;
+    height: 10%;
+  }
+}
+.show-menu{  //* for main page menu bar
+  width: 200px;
+  height: 400px;
+  row-gap: 20px;
+  padding: 0px;
+  display:flex;
+  position: relative;
+  top: 20px;
+  right:-20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdf5e6;
+  border:0.5px solid #6a6a6b4d;
+  border-radius: 10px 0px 0px 10px;
+}
 
-.container {
+.container {  //*for the pink area 
   direction: rtl;
   background-color: #FFF2E9;
   height: 100vh;
   justify-content: end;
   margin-top: 0px;
-
-
-
-  section {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100vh - 60px);
-
-    p {
-      margin-top: 60px;
-      margin-bottom: 0px;
-      align-self: flex-end;
-
-    }
-
-    img {
-      width: 28%;
-      height: auto;
-    }
-  }
-
-  @media screen and (width <768px) {
-    img {
-      width: 30%;
-    }
-  }
 }
 
 
-.best {
+
+.best {  //* lines to seperate parts 
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -241,7 +239,7 @@ header {
   overflow: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
-  background-color: #989da47e;
+  background-color:  #e8e8e8e6;
   padding: 20px 100px 20px 10px;
   border-radius: 0px 40px 25px 0px;
 }
@@ -292,32 +290,16 @@ header {
 
 
 //* dropdown menu -------------------------------------------------------------------------------
-.dropdown {
-  padding: 15px 0px 15px 0px;
-}
-/* CSS for hiding the dropdown menu initially */
-.dropdown-menu {
-  visibility: hidden;
-  display:flex;
-  align-content: flex-start;
+.dropdown-menu{
+  display: flex;
+  opacity: 0;
+  height: 0; /* Start with zero height */
+  width: 200px;
   flex-direction: column;
-  column-gap: 80px;
-  row-gap: 30px;
-  position: absolute;
-  top: 60px;
-  right: 0px;
-  height: 0px;
-  width: 350px;
-  flex-wrap: wrap;
-  transition: height 1s ease;
-  background-color:#fdfdf5e6 ;
-  
+  align-items: center;
+  transition: height 0.3s ease; /* Add a transition for height */
+  overflow: hidden;
+  background-color: #fdfdf5e6;
+  margin-top: 10px;
 }
 
-/* CSS for displaying the dropdown menu when hovering over the parent link */
-li:hover > .dropdown-menu {
- 
-  
-  height: 200px;
-  visibility: visible;
-}
